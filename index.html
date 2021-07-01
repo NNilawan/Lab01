@@ -12,11 +12,25 @@
 
 <body>
     <div id="app">
-        <h1>Product goes here</h1>
+        <!-- 2.3 -->
+        <!-- <h1>Product goes here</h1> -->
+        <h1>{{product}}</h1>
+        <!-- 2.3 -->
+
+        <!-- 2.5 -->
+        <p>{{description}}</p>
+        <!-- 2.5 -->
+
     </div>
 
     <!-- Import Js -->
     <script src="./main.js"></script>
+
+    <!-- 2.2 -->
+    <script>
+        const mountedApp = app.mount('#app')
+    </script>
+    <!-- 2.2 -->
 </body>
 
 </html>
