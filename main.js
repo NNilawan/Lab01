@@ -5,7 +5,7 @@ const app = Vue.createApp({
             return {
                 // 2.4
                 // product: 'Socks'
-                product: 'Boots',
+                // product: 'Boots',
                 // 2.4
 
                 // 2.5
@@ -17,8 +17,19 @@ const app = Vue.createApp({
                 // 3.2
 
                 // 3.6
-                link: 'https://www.camt.cmu.ac.th'
-                    // 3.6
+                link: 'https://www.camt.cmu.ac.th',
+                // 3.6
+
+                // 4.2,4.5
+                product: 'Shoes',
+                inStock: true,
+                inventory: 100,
+                // 4.2,4.5
+
+                // 4.9
+                onSale: false
+
+
             }
         }
     })

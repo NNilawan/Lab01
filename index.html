@@ -35,6 +35,22 @@
                 </div>
                 <div class="product-info">
                     <h1><a :href="link">{{product}}</a></h1>
+                    <!-- 4.1 -->
+                    <!-- <p>In Stock</p>
+                    <p>Out of Stock</p> -->
+                    <!-- 4.1 -->
+
+                    <!-- 4.3 -->
+                    <!-- <p v-if="inStock">In Stock</p> -->
+                    <p v-if="inventory>10">In Stock</p>
+                    <p v-else-if="inventory <= 10 && inventory >0">In Stock</p>
+                    <p v-else>Out of Stock</p>
+                    <!-- 4.3 -->
+
+                    <!-- 4.9 -->
+                    <p v-if="onSale">On Sale</p>
+                    <p v-else>Not On Sale</p>
+
                 </div>
             </div>
         </div>
