@@ -26,8 +26,18 @@ const app = Vue.createApp({
                 inventory: 100,
                 // 4.2,4.5
 
+                // 5.1
+                details: ['50% cotton', '30% wool', '20% polyester'],
+                // 5.9
+                sizes: ['S', 'M', 'L'],
+
+                // 2.3
+                variants: [
+                    { id: 2234, color: 'green' },
+                    { id: 2235, color: 'blue' }
+                ],
                 // 4.9
-                onSale: false
+                onSale: true
 
 
             }
