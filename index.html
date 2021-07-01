@@ -23,6 +23,9 @@
 
         <!-- 3.1 -->
         <div class="nav-bar"></div>
+        <!-- 6.2 -->
+        <div class="cart"> Cart({{ cart}})</div>
+        <!-- 6.2 -->
         <div class="product-display">
             <div class="product-container">
                 <div class="product-image">
@@ -41,9 +44,9 @@
                     <!-- 4.1 -->
 
                     <!-- 4.3 -->
-                    <!-- <p v-if="inStock">In Stock</p> -->
-                    <p v-if="inventory>10">In Stock</p>
-                    <p v-else-if="inventory <= 10 && inventory >0">In Stock</p>
+                    <p v-if="inStock">In Stock</p>
+                    <!-- <p v-if="inventory>10">In Stock</p>
+                    <p v-else-if="inventory <= 10 && inventory >0">In Stock</p> -->
                     <p v-else>Out of Stock</p>
                     <!-- 4.3 -->
 
@@ -51,8 +54,9 @@
                     <ul>
                         <li v-for="detail in details">{{detail}}</li>
                     </ul>
-                    <div v-for="variant in variants" :key="variant.id">{{ variant.color}}</div>
+                    <!-- <div v-for="variant in variants" :key="variant.id">{{ variant.color}}</div> -->
                     <!-- 5.2-5.3 -->
+
                     <!-- 5.9 -->
 
                     <br>
@@ -62,6 +66,23 @@
                     <!-- 4.9 -->
                     <p v-if="onSale">On Sale</p>
                     <p v-else>Not On Sale</p>
+
+                     <!-- 6.3 -->
+                     <!-- <button class="button" v-on:click="addToCart">Add to Cart</button> -->
+                     <!-- 6.3 -->
+
+                    <!-- 6.5 -->
+                    <!-- <button class="button" @click="addToCart">Add to Cart</button> -->
+                    <!-- 6.5 -->
+
+                    <!-- 6.6 -->
+                    <div v-for="variant in variants" :key="variant.id" @mouseover = "updateImage(variant.image)" >{{ variant.color}}</div>
+                    <button class="button" @click="addToCart">Add to Cart</button>
+                    <!-- 6.6 -->
+
+                    <!-- 6.7 -->
+                    <button class="button" @click="checkStock">Current Stock Status</button>
+                    <!-- 6.7 -->
 
                 </div>
             </div>

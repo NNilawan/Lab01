@@ -23,7 +23,7 @@ const app = Vue.createApp({
                 // 4.2,4.5
                 product: 'Shoes',
                 inStock: true,
-                inventory: 100,
+                inventory: 5,
                 // 4.2,4.5
 
                 // 5.1
@@ -33,12 +33,32 @@ const app = Vue.createApp({
 
                 // 2.3
                 variants: [
-                    { id: 2234, color: 'green' },
-                    { id: 2235, color: 'blue' }
+                    { id: 2234, color: 'green', image: './assets/images/socks_green.jpg' },
+                    { id: 2235, color: 'blue', image: './assets/images/socks_blue.jpg' }
                 ],
+                // 6.1
+                cart: 0,
                 // 4.9
                 onSale: true
 
+
+            }
+        },
+        // 6.4
+        methods: {
+            addToCart() {
+                this.cart += 1
+                this.inventory -= 1
+            },
+            updateImage(varianImage) {
+                this.image = varianImage
+            },
+            checkStock() {
+                if (this.inventory <= 0) {
+                    this.inStock = false
+                } else {
+                    this.inStock = true
+                }
 
             }
         }
